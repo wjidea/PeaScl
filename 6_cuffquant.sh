@@ -1,0 +1,20 @@
+#!/usr/bin/bash
+
+~/Apps/cufflinks-2.2.1.Linux_x86_64/cuffquant -o ./cuffquant_out/Lifter-Scl-12-1 -p 8 -b ../ref_scl/Sclsc1_AssemblyScaffolds.fasta ./merged_asm/merged.gtf /home/peascl/scl_de/thout_genes_scl/Lifter-Scl-12-1/accepted_hits.bam
+~/Apps/cufflinks-2.2.1.Linux_x86_64/cuffquant -o ./cuffquant_out/Lifter-Scl-12-BR -p 8 -b ../ref_scl/Sclsc1_AssemblyScaffolds.fasta ./merged_asm/merged.gtf /home/peascl/scl_de/thout_genes_scl/Lifter-Scl-12-BR/accepted_hits.bam
+~/Apps/cufflinks-2.2.1.Linux_x86_64/cuffquant -o ./cuffquant_out/Lifter-Scl-24-1 -p 8 -b ../ref_scl/Sclsc1_AssemblyScaffolds.fasta ./merged_asm/merged.gtf /home/peascl/scl_de/thout_genes_scl/Lifter-Scl-24-1/accepted_hits.bam
+~/Apps/cufflinks-2.2.1.Linux_x86_64/cuffquant -o ./cuffquant_out/Lifter-Scl-24-BR -p 8 -b ../ref_scl/Sclsc1_AssemblyScaffolds.fasta ./merged_asm/merged.gtf /home/peascl/scl_de/thout_genes_scl/Lifter-Scl-24-BR/accepted_hits.bam
+~/Apps/cufflinks-2.2.1.Linux_x86_64/cuffquant -o ./cuffquant_out/Lifter-Scl-48-1 -p 8 -b ../ref_scl/Sclsc1_AssemblyScaffolds.fasta ./merged_asm/merged.gtf /home/peascl/scl_de/thout_genes_scl/Lifter-Scl-48-1/accepted_hits.bam
+~/Apps/cufflinks-2.2.1.Linux_x86_64/cuffquant -o ./cuffquant_out/Lifter-Scl-48-BR -p 8 -b ../ref_scl/Sclsc1_AssemblyScaffolds.fasta ./merged_asm/merged.gtf /home/peascl/scl_de/thout_genes_scl/Lifter-Scl-48-BR/accepted_hits.bam
+~/Apps/cufflinks-2.2.1.Linux_x86_64/cuffquant -o ./cuffquant_out/PI240515-Scl-12-1 -p 8 -b ../ref_scl/Sclsc1_AssemblyScaffolds.fasta ./merged_asm/merged.gtf /home/peascl/scl_de/thout_genes_scl/PI240515-Scl-12-1/accepted_hits.bam
+~/Apps/cufflinks-2.2.1.Linux_x86_64/cuffquant -o ./cuffquant_out/PI240515-Scl-12-BR -p 8 -b ../ref_scl/Sclsc1_AssemblyScaffolds.fasta ./merged_asm/merged.gtf /home/peascl/scl_de/thout_genes_scl/PI240515-Scl-12-BR/accepted_hits.bam
+~/Apps/cufflinks-2.2.1.Linux_x86_64/cuffquant -o ./cuffquant_out/PI240515-Scl-24-1 -p 8 -b ../ref_scl/Sclsc1_AssemblyScaffolds.fasta ./merged_asm/merged.gtf /home/peascl/scl_de/thout_genes_scl/PI240515-Scl-24-1/accepted_hits.bam
+~/Apps/cufflinks-2.2.1.Linux_x86_64/cuffquant -o ./cuffquant_out/PI240515-Scl-24-BR -p 8 -b ../ref_scl/Sclsc1_AssemblyScaffolds.fasta ./merged_asm/merged.gtf /home/peascl/scl_de/thout_genes_scl/PI240515-Scl-24-BR/accepted_hits.bam
+~/Apps/cufflinks-2.2.1.Linux_x86_64/cuffquant -o ./cuffquant_out/PI240515-Scl-48-1 -p 8 -b ../ref_scl/Sclsc1_AssemblyScaffolds.fasta ./merged_asm/merged.gtf /home/peascl/scl_de/thout_genes_scl/PI240515-Scl-48-1/accepted_hits.bam
+~/Apps/cufflinks-2.2.1.Linux_x86_64/cuffquant -o ./cuffquant_out/PI240515-Scl-48-BR -p 8 -b ../ref_scl/Sclsc1_AssemblyScaffolds.fasta ./merged_asm/merged.gtf /home/peascl/scl_de/thout_genes_scl/PI240515-Scl-48-BR/accepted_hits.bam
+~/Apps/cufflinks-2.2.1.Linux_x86_64/cuffquant -o ./cuffquant_out/Scl0205-12hr-1 -p 8 -b ../ref_scl/Sclsc1_AssemblyScaffolds.fasta ./merged_asm/merged.gtf /home/peascl/scl_de/thout_genes_scl/Scl0205-12hr-1/accepted_hits.bam
+~/Apps/cufflinks-2.2.1.Linux_x86_64/cuffquant -o ./cuffquant_out/Scl0205-12hr-BR -p 8 -b ../ref_scl/Sclsc1_AssemblyScaffolds.fasta ./merged_asm/merged.gtf /home/peascl/scl_de/thout_genes_scl/Scl0205-12hr-BR/accepted_hits.bam
+~/Apps/cufflinks-2.2.1.Linux_x86_64/cuffquant -o ./cuffquant_out/Scl0205-24-1 -p 8 -b ../ref_scl/Sclsc1_AssemblyScaffolds.fasta ./merged_asm/merged.gtf /home/peascl/scl_de/thout_genes_scl/Scl0205-24-1/accepted_hits.bam
+~/Apps/cufflinks-2.2.1.Linux_x86_64/cuffquant -o ./cuffquant_out/Scl0205-24-BR -p 8 -b ../ref_scl/Sclsc1_AssemblyScaffolds.fasta ./merged_asm/merged.gtf /home/peascl/scl_de/thout_genes_scl/Scl0205-24-BR/accepted_hits.bam
+~/Apps/cufflinks-2.2.1.Linux_x86_64/cuffquant -o ./cuffquant_out/Scl0205-48-1 -p 8 -b ../ref_scl/Sclsc1_AssemblyScaffolds.fasta ./merged_asm/merged.gtf /home/peascl/scl_de/thout_genes_scl/Scl0205-48-1/accepted_hits.bam
+~/Apps/cufflinks-2.2.1.Linux_x86_64/cuffquant -o ./cuffquant_out/Scl0205-48-BR -p 8 -b ../ref_scl/Sclsc1_AssemblyScaffolds.fasta ./merged_asm/merged.gtf /home/peascl/scl_de/thout_genes_scl/Scl0205-48-BR/accepted_hits.bam

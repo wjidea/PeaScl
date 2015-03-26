@@ -1,0 +1,19 @@
+#!/usr/bin/bash
+#cp /home/peascl/scl_de/thout_genes_scl/Lifter-Scl-12-1/accepted_hits.bam /home/peascl/scl_de/thout_genes_scl/all_bams/Lifter-Scl-12-1.bam
+#cp /home/peascl/scl_de/thout_genes_scl/Lifter-Scl-12-BR/accepted_hits.bam /home/peascl/scl_de/thout_genes_scl/all_bams/Lifter-Scl-12-BR.bam
+#cp /home/peascl/scl_de/thout_genes_scl/Lifter-Scl-24-1/accepted_hits.bam /home/peascl/scl_de/thout_genes_scl/all_bams/Lifter-Scl-24-1.bam
+#cp /home/peascl/scl_de/thout_genes_scl/Lifter-Scl-24-BR/accepted_hits.bam /home/peascl/scl_de/thout_genes_scl/all_bams/Lifter-Scl-24-BR.bam
+#cp /home/peascl/scl_de/thout_genes_scl/Lifter-Scl-48-1/accepted_hits.bam /home/peascl/scl_de/thout_genes_scl/all_bams/Lifter-Scl-48-1.bam
+#cp /home/peascl/scl_de/thout_genes_scl/Lifter-Scl-48-BR/accepted_hits.bam /home/peascl/scl_de/thout_genes_scl/all_bams/Lifter-Scl-48-BR.bam
+#cp /home/peascl/scl_de/thout_genes_scl/PI240515-Scl-12-1/accepted_hits.bam /home/peascl/scl_de/thout_genes_scl/all_bams/PI240515-Scl-12-1.bam
+#cp /home/peascl/scl_de/thout_genes_scl/PI240515-Scl-12-BR/accepted_hits.bam /home/peascl/scl_de/thout_genes_scl/all_bams/PI240515-Scl-12-BR.bam
+#cp /home/peascl/scl_de/thout_genes_scl/PI240515-Scl-24-1/accepted_hits.bam /home/peascl/scl_de/thout_genes_scl/all_bams/PI240515-Scl-24-1.bam
+#cp /home/peascl/scl_de/thout_genes_scl/PI240515-Scl-24-BR/accepted_hits.bam /home/peascl/scl_de/thout_genes_scl/all_bams/PI240515-Scl-24-BR.bam
+#cp /home/peascl/scl_de/thout_genes_scl/PI240515-Scl-48-1/accepted_hits.bam /home/peascl/scl_de/thout_genes_scl/all_bams/PI240515-Scl-48-1.bam
+#cp /home/peascl/scl_de/thout_genes_scl/PI240515-Scl-48-BR/accepted_hits.bam /home/peascl/scl_de/thout_genes_scl/all_bams/PI240515-Scl-48-BR.bam
+#cp /home/peascl/scl_de/thout_genes_scl/Scl0205-12hr-1/accepted_hits.bam /home/peascl/scl_de/thout_genes_scl/all_bams/Scl0205-12hr-1.bam
+#cp /home/peascl/scl_de/thout_genes_scl/Scl0205-12hr-BR/accepted_hits.bam /home/peascl/scl_de/thout_genes_scl/all_bams/Scl0205-12hr-BR.bam
+cp /home/peascl/scl_de/thout_genes_scl/Scl0205-24-1/accepted_hits.bam /home/peascl/scl_de/thout_genes_scl/all_bams/Scl0205-24-1.bam
+cp /home/peascl/scl_de/thout_genes_scl/Scl0205-24-BR/accepted_hits.bam /home/peascl/scl_de/thout_genes_scl/all_bams/Scl0205-24-BR.bam
+cp /home/peascl/scl_de/thout_genes_scl/Scl0205-48-1/accepted_hits.bam /home/peascl/scl_de/thout_genes_scl/all_bams/Scl0205-48-1.bam
+cp /home/peascl/scl_de/thout_genes_scl/Scl0205-48-BR/accepted_hits.bam /home/peascl/scl_de/thout_genes_scl/all_bams/Scl0205-48-BR.bam
