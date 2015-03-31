@@ -1,0 +1,200 @@
+[0m[23m[24m[Jpeascl@chilvers-HPC{Exec} [K[188C[1m[11:41AM][0m[197D../trim-script.sh[1m [0m[0m [?1l>
+TrimmomaticPE: Started with arguments: -trimlog trimlog.txt /home/peascl/Raw/Lifter-Scl-12/Lifter-Scl-12-1_TGACCA_L007_R1_001_pf.fastq.gz /home/peascl/Raw/Lifter-Scl-12/Lifter-Scl-12-1_TGACCA_L007_R2_001_pf.fastq.gz /home/peascl/Raw/Lifter-Scl-12/Lifter-Scl-12-1_TGACCA_L007_R1_001_pf.PE.fq.gz /home/peascl/Raw/Lifter-Scl-12/Lifter-Scl-12-1_TGACCA_L007_R1_001_pf.SE.fq.gz /home/peascl/Raw/Lifter-Scl-12/Lifter-Scl-12-1_TGACCA_L007_R2_001_pf.PE.fq.gz /home/peascl/Raw/Lifter-Scl-12/Lifter-Scl-12-1_TGACCA_L007_R2_001_pf.SE.fq.gz ILLUMINACLIP:/home/wjidea/apps/Trimmomatic-0.32/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Multiple cores found: Using 12 threads
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Quality encoding detected as phred33
+Input Read Pairs: 2611845 Both Surviving: 2461981 (94.26%) Forward Only Surviving: 87547 (3.35%) Reverse Only Surviving: 28951 (1.11%) Dropped: 33366 (1.28%)
+TrimmomaticPE: Completed successfully
+TrimmomaticPE: Started with arguments: -trimlog trimlog.txt /home/peascl/Raw/Lifter-Scl-12/Lifter-Scl-12-BR_TGACCA_L004_R1_001_pf.fastq.gz /home/peascl/Raw/Lifter-Scl-12/Lifter-Scl-12-BR_TGACCA_L004_R2_001_pf.fastq.gz /home/peascl/Raw/Lifter-Scl-12/Lifter-Scl-12-BR_TGACCA_L004_R1_001_pf.PE.fq.gz /home/peascl/Raw/Lifter-Scl-12/Lifter-Scl-12-BR_TGACCA_L004_R1_001_pf.SE.fq.gz /home/peascl/Raw/Lifter-Scl-12/Lifter-Scl-12-BR_TGACCA_L004_R2_001_pf.PE.fq.gz /home/peascl/Raw/Lifter-Scl-12/Lifter-Scl-12-BR_TGACCA_L004_R2_001_pf.SE.fq.gz ILLUMINACLIP:/home/wjidea/apps/Trimmomatic-0.32/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Multiple cores found: Using 12 threads
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Quality encoding detected as phred33
+Input Read Pairs: 11721430 Both Surviving: 10507741 (89.65%) Forward Only Surviving: 726799 (6.20%) Reverse Only Surviving: 316516 (2.70%) Dropped: 170374 (1.45%)
+TrimmomaticPE: Completed successfully
+TrimmomaticPE: Started with arguments: -trimlog trimlog.txt /home/peascl/Raw/Lifter-Scl-24/Lifter-Scl-24-1_TGACCA_L008_R1_001_pf.fastq.gz /home/peascl/Raw/Lifter-Scl-24/Lifter-Scl-24-1_TGACCA_L008_R2_001_pf.fastq.gz /home/peascl/Raw/Lifter-Scl-24/Lifter-Scl-24-1_TGACCA_L008_R1_001_pf.PE.fq.gz /home/peascl/Raw/Lifter-Scl-24/Lifter-Scl-24-1_TGACCA_L008_R1_001_pf.SE.fq.gz /home/peascl/Raw/Lifter-Scl-24/Lifter-Scl-24-1_TGACCA_L008_R2_001_pf.PE.fq.gz /home/peascl/Raw/Lifter-Scl-24/Lifter-Scl-24-1_TGACCA_L008_R2_001_pf.SE.fq.gz ILLUMINACLIP:/home/wjidea/apps/Trimmomatic-0.32/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Multiple cores found: Using 12 threads
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Quality encoding detected as phred33
+Input Read Pairs: 4470340 Both Surviving: 4225236 (94.52%) Forward Only Surviving: 137964 (3.09%) Reverse Only Surviving: 62510 (1.40%) Dropped: 44630 (1.00%)
+TrimmomaticPE: Completed successfully
+TrimmomaticPE: Started with arguments: -trimlog trimlog.txt /home/peascl/Raw/Lifter-Scl-24/Lifter-Scl-24-BR_TGACCA_L006_R1_001_pf.fastq.gz /home/peascl/Raw/Lifter-Scl-24/Lifter-Scl-24-BR_TGACCA_L006_R2_001_pf.fastq.gz /home/peascl/Raw/Lifter-Scl-24/Lifter-Scl-24-BR_TGACCA_L006_R1_001_pf.PE.fq.gz /home/peascl/Raw/Lifter-Scl-24/Lifter-Scl-24-BR_TGACCA_L006_R1_001_pf.SE.fq.gz /home/peascl/Raw/Lifter-Scl-24/Lifter-Scl-24-BR_TGACCA_L006_R2_001_pf.PE.fq.gz /home/peascl/Raw/Lifter-Scl-24/Lifter-Scl-24-BR_TGACCA_L006_R2_001_pf.SE.fq.gz ILLUMINACLIP:/home/wjidea/apps/Trimmomatic-0.32/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Multiple cores found: Using 12 threads
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Quality encoding detected as phred33
+Input Read Pairs: 6831490 Both Surviving: 6364223 (93.16%) Forward Only Surviving: 281444 (4.12%) Reverse Only Surviving: 126391 (1.85%) Dropped: 59432 (0.87%)
+TrimmomaticPE: Completed successfully
+TrimmomaticPE: Started with arguments: -trimlog trimlog.txt /home/peascl/Raw/Lifter-Scl-48/Lifter-Scl-48-1_TGACCA_L003_R1_001_pf.fastq.gz /home/peascl/Raw/Lifter-Scl-48/Lifter-Scl-48-1_TGACCA_L003_R2_001_pf.fastq.gz /home/peascl/Raw/Lifter-Scl-48/Lifter-Scl-48-1_TGACCA_L003_R1_001_pf.PE.fq.gz /home/peascl/Raw/Lifter-Scl-48/Lifter-Scl-48-1_TGACCA_L003_R1_001_pf.SE.fq.gz /home/peascl/Raw/Lifter-Scl-48/Lifter-Scl-48-1_TGACCA_L003_R2_001_pf.PE.fq.gz /home/peascl/Raw/Lifter-Scl-48/Lifter-Scl-48-1_TGACCA_L003_R2_001_pf.SE.fq.gz ILLUMINACLIP:/home/wjidea/apps/Trimmomatic-0.32/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Multiple cores found: Using 12 threads
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Quality encoding detected as phred33
+Input Read Pairs: 8152846 Both Surviving: 7036100 (86.30%) Forward Only Surviving: 560047 (6.87%) Reverse Only Surviving: 393085 (4.82%) Dropped: 163614 (2.01%)
+TrimmomaticPE: Completed successfully
+TrimmomaticPE: Started with arguments: -trimlog trimlog.txt /home/peascl/Raw/Lifter-Scl-48/Lifter-Scl-48-BR_TGACCA_L007_R1_001_pf.fastq.gz /home/peascl/Raw/Lifter-Scl-48/Lifter-Scl-48-BR_TGACCA_L007_R2_001_pf.fastq.gz /home/peascl/Raw/Lifter-Scl-48/Lifter-Scl-48-BR_TGACCA_L007_R1_001_pf.PE.fq.gz /home/peascl/Raw/Lifter-Scl-48/Lifter-Scl-48-BR_TGACCA_L007_R1_001_pf.SE.fq.gz /home/peascl/Raw/Lifter-Scl-48/Lifter-Scl-48-BR_TGACCA_L007_R2_001_pf.PE.fq.gz /home/peascl/Raw/Lifter-Scl-48/Lifter-Scl-48-BR_TGACCA_L007_R2_001_pf.SE.fq.gz ILLUMINACLIP:/home/wjidea/apps/Trimmomatic-0.32/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Multiple cores found: Using 12 threads
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Quality encoding detected as phred33
+Input Read Pairs: 11204868 Both Surviving: 10321280 (92.11%) Forward Only Surviving: 539706 (4.82%) Reverse Only Surviving: 216846 (1.94%) Dropped: 127036 (1.13%)
+TrimmomaticPE: Completed successfully
+TrimmomaticPE: Started with arguments: -trimlog trimlog.txt /home/peascl/Raw/PI240515-Scl-12/PI240515-Scl-12-1_GCCAAT_L007_R1_001_pf.fastq.gz /home/peascl/Raw/PI240515-Scl-12/PI240515-Scl-12-1_GCCAAT_L007_R2_001_pf.fastq.gz /home/peascl/Raw/PI240515-Scl-12/PI240515-Scl-12-1_GCCAAT_L007_R1_001_pf.PE.fq.gz /home/peascl/Raw/PI240515-Scl-12/PI240515-Scl-12-1_GCCAAT_L007_R1_001_pf.SE.fq.gz /home/peascl/Raw/PI240515-Scl-12/PI240515-Scl-12-1_GCCAAT_L007_R2_001_pf.PE.fq.gz /home/peascl/Raw/PI240515-Scl-12/PI240515-Scl-12-1_GCCAAT_L007_R2_001_pf.SE.fq.gz ILLUMINACLIP:/home/wjidea/apps/Trimmomatic-0.32/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Multiple cores found: Using 12 threads
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Quality encoding detected as phred33
+Input Read Pairs: 16523712 Both Surviving: 15757838 (95.37%) Forward Only Surviving: 575859 (3.49%) Reverse Only Surviving: 117470 (0.71%) Dropped: 72545 (0.44%)
+TrimmomaticPE: Completed successfully
+TrimmomaticPE: Started with arguments: -trimlog trimlog.txt /home/peascl/Raw/PI240515-Scl-12/PI240515-Scl-12-BR_GCCAAT_L004_R1_001_pf.fastq.gz /home/peascl/Raw/PI240515-Scl-12/PI240515-Scl-12-BR_GCCAAT_L004_R2_001_pf.fastq.gz /home/peascl/Raw/PI240515-Scl-12/PI240515-Scl-12-BR_GCCAAT_L004_R1_001_pf.PE.fq.gz /home/peascl/Raw/PI240515-Scl-12/PI240515-Scl-12-BR_GCCAAT_L004_R1_001_pf.SE.fq.gz /home/peascl/Raw/PI240515-Scl-12/PI240515-Scl-12-BR_GCCAAT_L004_R2_001_pf.PE.fq.gz /home/peascl/Raw/PI240515-Scl-12/PI240515-Scl-12-BR_GCCAAT_L004_R2_001_pf.SE.fq.gz ILLUMINACLIP:/home/wjidea/apps/Trimmomatic-0.32/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Multiple cores found: Using 12 threads
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Quality encoding detected as phred33
+Input Read Pairs: 12472982 Both Surviving: 11227148 (90.01%) Forward Only Surviving: 751326 (6.02%) Reverse Only Surviving: 327893 (2.63%) Dropped: 166615 (1.34%)
+TrimmomaticPE: Completed successfully
+TrimmomaticPE: Started with arguments: -trimlog trimlog.txt /home/peascl/Raw/PI240515-Scl-24/PI240515-Scl-24-1_GCCAAT_L008_R1_001_pf.fastq.gz /home/peascl/Raw/PI240515-Scl-24/PI240515-Scl-24-1_GCCAAT_L008_R2_001_pf.fastq.gz /home/peascl/Raw/PI240515-Scl-24/PI240515-Scl-24-1_GCCAAT_L008_R1_001_pf.PE.fq.gz /home/peascl/Raw/PI240515-Scl-24/PI240515-Scl-24-1_GCCAAT_L008_R1_001_pf.SE.fq.gz /home/peascl/Raw/PI240515-Scl-24/PI240515-Scl-24-1_GCCAAT_L008_R2_001_pf.PE.fq.gz /home/peascl/Raw/PI240515-Scl-24/PI240515-Scl-24-1_GCCAAT_L008_R2_001_pf.SE.fq.gz ILLUMINACLIP:/home/wjidea/apps/Trimmomatic-0.32/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Multiple cores found: Using 12 threads
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Quality encoding detected as phred33
+Input Read Pairs: 7491810 Both Surviving: 7187075 (95.93%) Forward Only Surviving: 192089 (2.56%) Reverse Only Surviving: 88087 (1.18%) Dropped: 24559 (0.33%)
+TrimmomaticPE: Completed successfully
+TrimmomaticPE: Started with arguments: -trimlog trimlog.txt /home/peascl/Raw/PI240515-Scl-24/PI240515-Scl-24-BR_GCCAAT_L006_R1_001_pf.fastq.gz /home/peascl/Raw/PI240515-Scl-24/PI240515-Scl-24-BR_GCCAAT_L006_R2_001_pf.fastq.gz /home/peascl/Raw/PI240515-Scl-24/PI240515-Scl-24-BR_GCCAAT_L006_R1_001_pf.PE.fq.gz /home/peascl/Raw/PI240515-Scl-24/PI240515-Scl-24-BR_GCCAAT_L006_R1_001_pf.SE.fq.gz /home/peascl/Raw/PI240515-Scl-24/PI240515-Scl-24-BR_GCCAAT_L006_R2_001_pf.PE.fq.gz /home/peascl/Raw/PI240515-Scl-24/PI240515-Scl-24-BR_GCCAAT_L006_R2_001_pf.SE.fq.gz ILLUMINACLIP:/home/wjidea/apps/Trimmomatic-0.32/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Multiple cores found: Using 12 threads
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Quality encoding detected as phred33
+Input Read Pairs: 15407806 Both Surviving: 14286225 (92.72%) Forward Only Surviving: 708267 (4.60%) Reverse Only Surviving: 283262 (1.84%) Dropped: 130052 (0.84%)
+TrimmomaticPE: Completed successfully
+TrimmomaticPE: Started with arguments: -trimlog trimlog.txt /home/peascl/Raw/PI240515-Scl-48/PI240515-Scl-48-1_GCCAAT_L003_R1_001_pf.fastq.gz /home/peascl/Raw/PI240515-Scl-48/PI240515-Scl-48-1_GCCAAT_L003_R2_001_pf.fastq.gz /home/peascl/Raw/PI240515-Scl-48/PI240515-Scl-48-1_GCCAAT_L003_R1_001_pf.PE.fq.gz /home/peascl/Raw/PI240515-Scl-48/PI240515-Scl-48-1_GCCAAT_L003_R1_001_pf.SE.fq.gz /home/peascl/Raw/PI240515-Scl-48/PI240515-Scl-48-1_GCCAAT_L003_R2_001_pf.PE.fq.gz /home/peascl/Raw/PI240515-Scl-48/PI240515-Scl-48-1_GCCAAT_L003_R2_001_pf.SE.fq.gz ILLUMINACLIP:/home/wjidea/apps/Trimmomatic-0.32/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Multiple cores found: Using 12 threads
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Quality encoding detected as phred33
+Input Read Pairs: 11261216 Both Surviving: 9661146 (85.79%) Forward Only Surviving: 885423 (7.86%) Reverse Only Surviving: 506393 (4.50%) Dropped: 208254 (1.85%)
+TrimmomaticPE: Completed successfully
+TrimmomaticPE: Started with arguments: -trimlog trimlog.txt /home/peascl/Raw/PI240515-Scl-48/PI240515-Scl-48-BR_GCCAAT_L007_R1_001_pf.fastq.gz /home/peascl/Raw/PI240515-Scl-48/PI240515-Scl-48-BR_GCCAAT_L007_R2_001_pf.fastq.gz /home/peascl/Raw/PI240515-Scl-48/PI240515-Scl-48-BR_GCCAAT_L007_R1_001_pf.PE.fq.gz /home/peascl/Raw/PI240515-Scl-48/PI240515-Scl-48-BR_GCCAAT_L007_R1_001_pf.SE.fq.gz /home/peascl/Raw/PI240515-Scl-48/PI240515-Scl-48-BR_GCCAAT_L007_R2_001_pf.PE.fq.gz /home/peascl/Raw/PI240515-Scl-48/PI240515-Scl-48-BR_GCCAAT_L007_R2_001_pf.SE.fq.gz ILLUMINACLIP:/home/wjidea/apps/Trimmomatic-0.32/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Multiple cores found: Using 12 threads
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Quality encoding detected as phred33
+Input Read Pairs: 8921161 Both Surviving: 8144930 (91.30%) Forward Only Surviving: 511337 (5.73%) Reverse Only Surviving: 165397 (1.85%) Dropped: 99497 (1.12%)
+TrimmomaticPE: Completed successfully
+TrimmomaticPE: Started with arguments: -trimlog trimlog.txt /home/peascl/Raw/Scl-CK-12/Scl0205-12hr-1_CGATGT_L008_R1_001_pf.fastq.gz /home/peascl/Raw/Scl-CK-12/Scl0205-12hr-1_CGATGT_L008_R2_001_pf.fastq.gz /home/peascl/Raw/Scl-CK-12/Scl0205-12hr-1_CGATGT_L008_R1_001_pf.PE.fq.gz /home/peascl/Raw/Scl-CK-12/Scl0205-12hr-1_CGATGT_L008_R1_001_pf.SE.fq.gz /home/peascl/Raw/Scl-CK-12/Scl0205-12hr-1_CGATGT_L008_R2_001_pf.PE.fq.gz /home/peascl/Raw/Scl-CK-12/Scl0205-12hr-1_CGATGT_L008_R2_001_pf.SE.fq.gz ILLUMINACLIP:/home/wjidea/apps/Trimmomatic-0.32/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Multiple cores found: Using 12 threads
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Quality encoding detected as phred33
+Input Read Pairs: 6562190 Both Surviving: 5751640 (87.65%) Forward Only Surviving: 464148 (7.07%) Reverse Only Surviving: 215709 (3.29%) Dropped: 130693 (1.99%)
+TrimmomaticPE: Completed successfully
+TrimmomaticPE: Started with arguments: -trimlog trimlog.txt /home/peascl/Raw/Scl-CK-12/Scl0205-12hr-BR_GCCAAT_L008_R1_001_pf.fastq.gz /home/peascl/Raw/Scl-CK-12/Scl0205-12hr-BR_GCCAAT_L008_R2_001_pf.fastq.gz /home/peascl/Raw/Scl-CK-12/Scl0205-12hr-BR_GCCAAT_L008_R1_001_pf.PE.fq.gz /home/peascl/Raw/Scl-CK-12/Scl0205-12hr-BR_GCCAAT_L008_R1_001_pf.SE.fq.gz /home/peascl/Raw/Scl-CK-12/Scl0205-12hr-BR_GCCAAT_L008_R2_001_pf.PE.fq.gz /home/peascl/Raw/Scl-CK-12/Scl0205-12hr-BR_GCCAAT_L008_R2_001_pf.SE.fq.gz ILLUMINACLIP:/home/wjidea/apps/Trimmomatic-0.32/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Multiple cores found: Using 12 threads
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Quality encoding detected as phred33
+Input Read Pairs: 5239726 Both Surviving: 4590803 (87.62%) Forward Only Surviving: 371118 (7.08%) Reverse Only Surviving: 171809 (3.28%) Dropped: 105996 (2.02%)
+TrimmomaticPE: Completed successfully
+TrimmomaticPE: Started with arguments: -trimlog trimlog.txt /home/peascl/Raw/Scl-CK-24/Scl0205-24hr-1_TGACCA_L008_R1_001_pf.fastq.gz /home/peascl/Raw/Scl-CK-24/Scl0205-24hr-1_TGACCA_L008_R2_001_pf.fastq.gz /home/peascl/Raw/Scl-CK-24/Scl0205-24hr-1_TGACCA_L008_R1_001_pf.PE.fq.gz /home/peascl/Raw/Scl-CK-24/Scl0205-24hr-1_TGACCA_L008_R1_001_pf.SE.fq.gz /home/peascl/Raw/Scl-CK-24/Scl0205-24hr-1_TGACCA_L008_R2_001_pf.PE.fq.gz /home/peascl/Raw/Scl-CK-24/Scl0205-24hr-1_TGACCA_L008_R2_001_pf.SE.fq.gz ILLUMINACLIP:/home/wjidea/apps/Trimmomatic-0.32/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Multiple cores found: Using 12 threads
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Quality encoding detected as phred33
+Input Read Pairs: 4344469 Both Surviving: 3812579 (87.76%) Forward Only Surviving: 301623 (6.94%) Reverse Only Surviving: 144374 (3.32%) Dropped: 85893 (1.98%)
+TrimmomaticPE: Completed successfully
+TrimmomaticPE: Started with arguments: -trimlog trimlog.txt /home/peascl/Raw/Scl-CK-24/Scl0205-24hr-BR_CAGATC_L008_R1_001_pf.fastq.gz /home/peascl/Raw/Scl-CK-24/Scl0205-24hr-BR_CAGATC_L008_R2_001_pf.fastq.gz /home/peascl/Raw/Scl-CK-24/Scl0205-24hr-BR_CAGATC_L008_R1_001_pf.PE.fq.gz /home/peascl/Raw/Scl-CK-24/Scl0205-24hr-BR_CAGATC_L008_R1_001_pf.SE.fq.gz /home/peascl/Raw/Scl-CK-24/Scl0205-24hr-BR_CAGATC_L008_R2_001_pf.PE.fq.gz /home/peascl/Raw/Scl-CK-24/Scl0205-24hr-BR_CAGATC_L008_R2_001_pf.SE.fq.gz ILLUMINACLIP:/home/wjidea/apps/Trimmomatic-0.32/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Multiple cores found: Using 12 threads
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Quality encoding detected as phred33
+Input Read Pairs: 6900308 Both Surviving: 6061152 (87.84%) Forward Only Surviving: 480908 (6.97%) Reverse Only Surviving: 225479 (3.27%) Dropped: 132769 (1.92%)
+TrimmomaticPE: Completed successfully
+TrimmomaticPE: Started with arguments: -trimlog trimlog.txt /home/peascl/Raw/Scl-CK-48/Scl0205-48hr-1_ACAGTG_L008_R1_001_pf.fastq.gz /home/peascl/Raw/Scl-CK-48/Scl0205-48hr-1_ACAGTG_L008_R2_001_pf.fastq.gz /home/peascl/Raw/Scl-CK-48/Scl0205-48hr-1_ACAGTG_L008_R1_001_pf.PE.fq.gz /home/peascl/Raw/Scl-CK-48/Scl0205-48hr-1_ACAGTG_L008_R1_001_pf.SE.fq.gz /home/peascl/Raw/Scl-CK-48/Scl0205-48hr-1_ACAGTG_L008_R2_001_pf.PE.fq.gz /home/peascl/Raw/Scl-CK-48/Scl0205-48hr-1_ACAGTG_L008_R2_001_pf.SE.fq.gz ILLUMINACLIP:/home/wjidea/apps/Trimmomatic-0.32/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Multiple cores found: Using 12 threads
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Quality encoding detected as phred33
+Input Read Pairs: 6799275 Both Surviving: 5999878 (88.24%) Forward Only Surviving: 445633 (6.55%) Reverse Only Surviving: 228475 (3.36%) Dropped: 125289 (1.84%)
+TrimmomaticPE: Completed successfully
+TrimmomaticPE: Started with arguments: -trimlog trimlog.txt /home/peascl/Raw/Scl-CK-48/Scl0205-48hr-BR_CTTGTA_L008_R1_001_pf.fastq.gz /home/peascl/Raw/Scl-CK-48/Scl0205-48hr-BR_CTTGTA_L008_R2_001_pf.fastq.gz /home/peascl/Raw/Scl-CK-48/Scl0205-48hr-BR_CTTGTA_L008_R1_001_pf.PE.fq.gz /home/peascl/Raw/Scl-CK-48/Scl0205-48hr-BR_CTTGTA_L008_R1_001_pf.SE.fq.gz /home/peascl/Raw/Scl-CK-48/Scl0205-48hr-BR_CTTGTA_L008_R2_001_pf.PE.fq.gz /home/peascl/Raw/Scl-CK-48/Scl0205-48hr-BR_CTTGTA_L008_R2_001_pf.SE.fq.gz ILLUMINACLIP:/home/wjidea/apps/Trimmomatic-0.32/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Multiple cores found: Using 12 threads
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Quality encoding detected as phred33
+Input Read Pairs: 6791544 Both Surviving: 6027305 (88.75%) Forward Only Surviving: 417508 (6.15%) Reverse Only Surviving: 231411 (3.41%) Dropped: 115320 (1.70%)
+TrimmomaticPE: Completed successfully
+[1m[3m%[23m[1m[0m                                                                                                                    [0m[23m[24m[Jpeascl@chilvers-HPC{Exec} [K[80C[1m[ 1:44PM][0m[89D[?1h=
