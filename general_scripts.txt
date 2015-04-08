@@ -1,0 +1,2 @@
+#Recover number of mapped reads from the Log file in the STAR output
+for i in ./*/*.Log.final.out; do sed -rn 's/ {1,}Uniquely mapped reads number \|\t([0-9]{2,})/\1/p' $i; print $i; done
