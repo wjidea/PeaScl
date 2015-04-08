@@ -18,7 +18,7 @@ sampleTable <- data.frame(sampleName=sampleFiles,
 #Read in dataset
 ddsHTSeq<-DESeqDataSetFromHTSeqCount(sampleTable=sampleTable, 
                                      directory=directory, 
-                                     design=~Hosts + TP)
+                                     design=~Hosts + TP + Hosts:TP)
 # relevel to make sure the order of the parameters in the right order
 # otherwise relvel is needed
 colData(ddsHTSeq)$Hosts <- factor(colData(ddsHTSeq)$Hosts, levels=c("Media_CK","Lifter","PI240515"))
