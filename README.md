@@ -9,8 +9,8 @@ Make changes to the deployment settings in the repository.
    - New GTF file will be generated using Cuffmerge method with cufflink output
 
 # To-do List
-  * Remove no strand 
-  * Merge GTF file for ab initio mapping
-  * Run parallel HT-Seq
-  * EDA with DEseq2
+  1. Remove no strand 
+  2. Merge GTF file for ab initio mapping
+  3. Run parallel HT-Seq
+  4. EDA with DEseq2
 
