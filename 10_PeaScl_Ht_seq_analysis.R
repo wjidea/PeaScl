@@ -9,8 +9,6 @@ HostNames <- c(rep("Lifter",6),rep("PI240515",6),rep("Media_CK",6))
 TimePoint <- c("12","12","24","24","48","48",
                "12","12","24","24","48","48",
                "12","12","24","24","48","48")
-Interact <- c("L12","L12","L24","L24","L48","L48","P12","P12","P24","P24","P48","P48","S12","S12",
-              "S24","S24", "S48","S48" )
 ## DESeq data set needs to be a data.frame
 # SampleFile will connect independent files with the different conditions
 samplename <- unlist(lapply(sampleFiles,function(x) gsub("\\.htout\\.new","",x)))
@@ -30,18 +28,19 @@ ddsHTSeq<-DESeqDataSetFromHTSeqCount(sampleTable=sampleTable,
 
 # Re-level to make sure the order of the parameters in the right order
 # Otherwise re-level is needed
-# colData(ddsHTSeq)$Hosts <- factor(colData(ddsHTSeq)$Hosts, levels=c("Media_CK","Lifter","PI240515"))
-# colData(ddsHTSeq)$TP <- factor(colData(ddsHTSeq)$TP, levels=c("12","24","48"))
-# colData(ddsHTSeq)$HostsTP <- factor(colData(ddsHTSeq)$, levels=c("12","24","48"))
+colData(ddsHTSeq)$Hosts <- factor(colData(ddsHTSeq)$Hosts, levels=c("Media_CK","Lifter","PI240515"))
+colData(ddsHTSeq)$TP <- factor(colData(ddsHTSeq)$TP, levels=c("12","24","48"))
+
 # Normalize reads among gene expression
 dds<-DESeq(ddsHTSeq)
-dds$nested <- factor(c("L12","L12","L24","L24","L48","L48","P12","P12","P24","P24","P48","P48","S12","S12",
-                       "S24","S24", "S48","S48"))
-resall <- results(dds)
+
+#if relevel is needed
+#dds$Hosts <- relevel(dds$Hosts, "Media_CK")
+
+# explore the result in general, and generate FDR
+resall <- results(dds,pAdjustMethod = "BH")
+# sort by FDR
 resall <- res[order(resall$padj),]
-res <- results(dds,contrast = c("Hosts","PI240515","Lifter"), )
-res <- res[order(res$padj),]
-head(res)
 plotMA(dds,ylim=c(-2,2))
 
 # Estimate size factors and plot 
@@ -66,11 +65,11 @@ legend("topright",legend=c("12","24","48"),col=c("Green","Red","Black"),pch=16)
 plot(hclust(dist(t(logcounts))), labels=colData(dds)$Hosts)
 plot(hclust(dist(t(logcounts))), labels=colData(dds)$TP)
 # logcounts
-plot(logcounts[,1], logcounts[,2], cex=.1)
+# plot(logcounts[,1], logcounts[,3], cex=.1)
 
 # rlog transforamtion of data
 # this takes ~15 seconds
-rld <- rlogTransformation(dds)
+rld <- rlogTransformation(dds,blind=FALSE,)
 
 ## PCA after rlog transformation of data
 pc2 <- prcomp( t( assay(rld) ) )
@@ -92,7 +91,7 @@ par(mfrow=c(1,1))
 plot(assay(rld)[,1], assay(rld)[,2], cex=.1)
 
 
-resBigFC <- results(dds, cooksCutoff = 1, altHypothesis="greaterAbs")
+resBigFC <- results(dds, altHypothesis="greaterAbs")
 plotMA(resBigFC, ylim=c(-5,5))
 abline(h=c(-1,1),lwd=5)
 
