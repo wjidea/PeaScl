@@ -90,39 +90,28 @@ plot(hclust(dist(t(assay(rld)))), labels=colData(rld)$TP)
 par(mfrow=c(1,1))
 plot(assay(rld)[,1], assay(rld)[,2], cex=.1)
 
-
-resBigFC <- results(dds, altHypothesis="greaterAbs")
+# show results with the genes that are up regulated
+resBigFC <- results(dds, altHypothesis="greaterAbs",pAdjustMethod = "BH",)
+resBigFCsort <- resBigFC[order(resBigFC$padj),]
+head(resBigFCsort)
 plotMA(resBigFC, ylim=c(-5,5))
 abline(h=c(-1,1),lwd=5)
 
-resSort <- res[order(res$pvalue),]
-head(resSort)
-k <- counts(dds)[rownames(resSort)[1],]
-cond <- with(colData(dds), factor(paste(TP, Hosts)))
+
+# generate results with contrast
+res_lift_CK <- results(dds,contrast = list("HostsLifter.TP12", "HostsMedia_CK.TP12"),pAdjustMethod = "BH")
+res_lift_CKSort <- res_lift_CK[order(res_lift_CK$padj),]
+head(res_lift_CKSort,10)
+
+# VERY good function to show gene expression level between samples 
+# Give name to each column in the stripchart
+cond <- with(colData(dds), factor(paste(Hosts,TP)))
+# obtain normalized read from the top DE genes 
+# [2] is the rank of the gene in the dds sorted result (i.e. resSort)
+k <- counts(dds,normalized=TRUE)[rownames(res_lift_CKSort)[5],]
 par(mar=c(8,5,2,2))
-stripchart(log2(k + 1) ~ cond, method="jitter", vertical=TRUE, las=2)
+stripchart(log2(k + 1) ~ cond, method="jitter", vertical=TRUE, las=2,)
 
-
-res_time <- results(dds, contrast=c("TP","12","24"))
-res_timeSort <- res_time[order(res_time$pvalue),]
-head(res_timeSort,10)
-
-res_Lifter <- results(dds, contrast=list("HostsLifter.TP12","HostsLifter.TP24"), pAdjustMethod = "BH")
-res_timeSort <- res_time[order(res_time$padj),]
-head(res_timeSort,10)
-
-
-
-# #biocLite("org.Sc.sgd.db")
-# library(org.Sc.sgd.db)
-# keytypes(org.Sc.sgd.db)
-# keytypes(org.Mm.eg.db)
-# head(rownames(dds),20)
-# geneinfo <- select(org.Sc.sgd.db, keys=rownames(resSort)[1:20],
-#                    columns=c("PFAM","GO","EVIDENCE"), 
-#                    keytype="PFAM")
-# geneinfo
-# 
 
 library("RColorBrewer")
 library("gplots")
