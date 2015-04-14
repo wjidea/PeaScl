@@ -3,8 +3,11 @@ library(Biobase)
 library(GenomicRanges)
 library(ggplot2)
 library(gplots)
+# Install necessary packages
+# source("http://bioconductor.org/biocLite.R")
+# biocLite("DESeq2")
 # Prepare dataset
-setwd("/home/peascl/scl_de/htout_STAR_mergeGTF/R_output")
+setwd("/home/peascl/scl_de/htout_STAR_mergeGTF")
 directory <- "/home/peascl/scl_de/htout_STAR_mergeGTF"
 sampleFiles <- grep("htout.new",list.files(directory),value=TRUE)
 HostNames <- c(rep("Lifter",6),rep("PI240515",6),rep("Media_CK",6))
@@ -101,9 +104,24 @@ with(resBigFCsort[Gene, ], {
        pos=4, col="dodgerblue")
 })
 
-resBigFCsort[resBigFCsort$padj<0.1,]
-summary(resBigFCsort)
-
+# Cal.contrast <- function(vec1, vec2,lV=c(1,-1),top=50){
+#   res_func <- results(dds, contrast = list(vec1,vec2),
+#                       pAdjustMethod = "BH",listValues=lV)
+#   res_funcSort <- res_func[order(res_func$padj),]
+#   head(res_funcSort,top)
+# }
+  # Define conditions
+# cond <- with(colData(dds), factor(paste(Hosts,TP)))
+#   # VERY good function to show gene expression level between samples 
+#   # Give name to each column in the stripchart
+#   # obtain normalized read from the top DE genes 
+#   # [2] is the rank of the gene in the dds sorted result (i.e. resSort)
+# draw_stripchart <- function(x,n){
+#   k <- counts(dds,normalized=TRUE)[rownames(x)[n],]
+#   par(mar=c(8,5,2,2))
+#   stripchart(log2(k + 1) ~ cond, method="jitter", vertical=TRUE, las=2,)
+#   print(rownames(x)[n])
+# }
 #calculate contrast with significant threshold with FDR significance level of .1
 Cal.ContrastSig <- function(vec1, vec2,lV=c(1,-1),threshold=0.1){
   res_func <- results(dds, contrast = list(vec1,vec2),
@@ -112,27 +130,8 @@ Cal.ContrastSig <- function(vec1, vec2,lV=c(1,-1),threshold=0.1){
   resSig <- subset(res_funcSort, padj < threshold)
   resSig
 }
-Cal.ContrastSig(c("TP12","HostsLifter.TP12"),c("TP24","HostsLifter.TP24"),c(1,-1),0.1)
+#Cal.ContrastSig(c("TP12","HostsLifter.TP12"),c("TP24","HostsLifter.TP24"),c(1,-1),0.1)
 
-
-Cal.contrast <- function(vec1, vec2,lV=c(1,-1),top=50){
-  res_func <- results(dds, contrast = list(vec1,vec2),
-                      pAdjustMethod = "BH",listValues=lV)
-  res_funcSort <- res_func[order(res_func$padj),]
-  head(res_funcSort,top)
-}
-  # Define conditions
-cond <- with(colData(dds), factor(paste(Hosts,TP)))
-  # VERY good function to show gene expression level between samples 
-  # Give name to each column in the stripchart
-  # obtain normalized read from the top DE genes 
-  # [2] is the rank of the gene in the dds sorted result (i.e. resSort)
-draw_stripchart <- function(x,n){
-  k <- counts(dds,normalized=TRUE)[rownames(x)[n],]
-  par(mar=c(8,5,2,2))
-  stripchart(log2(k + 1) ~ cond, method="jitter", vertical=TRUE, las=2,)
-  print(rownames(x)[n])
-}
 draw_geneplot <- function (resfunc,n=1){
   topGene <- rownames(resfunc)[n]
   chartTitle <- paste("Gene Name: ",as.vector(unlist(strsplit(topGene,"\\|")))[2])
@@ -144,53 +143,42 @@ draw_geneplot <- function (resfunc,n=1){
   return(list(p,as.vector(unlist(strsplit(topGene,"\\|")))[2]))
 }
 
-draw_timeplot <- function (resfunc,n=1) {
-  topGene <- rownames(resfunc)[n]
-  chartTitle <- paste("Gene Name:",as.vector(unlist(strsplit(topGene,"\\|")))[2])
-  gdata <- plotCounts(dds , gene=topGene, intgroup=c("Hosts","TP"), 
-                      returnData=TRUE,normalized = TRUE)
-  ggplot(gdata, aes(x=TP, y=count, color=Hosts, group=Hosts)) + 
-    geom_point(size=4, position=position_jitter(width=0.05,height=0))+
-    stat_smooth(se=F,method="loess") + labs(title=chartTitle)
-}
-
-draw_timeplot(T12Lift,10)
 ####################### TIME Effect  ###########################
 # Detect time effect in host Lifter and PI
-T12Lift <- Cal.contrast(c("TP12","HostsLifter.TP12"),c("TP24","HostsLifter.TP24"))
-T24Lift <- Cal.contrast(c("TP24","HostsLifter.TP24"),c("TP48","HostsLifter.TP48"))
-T12PI <- Cal.contrast(c("TP12","HostsPI240515.TP12"),c("TP24","HostsPI240515.TP24"))
-T24PI <- Cal.contrast(c("TP24","HostsPI240515.TP24"),c("TP48","HostsPI240515.TP48"))
+T12Lift <- Cal.ContrastSig(c("TP12","HostsLifter.TP12"),c("TP24","HostsLifter.TP24"))
+T24Lift <- Cal.ContrastSig(c("TP24","HostsLifter.TP24"),c("TP48","HostsLifter.TP48"))
+T12PI <- Cal.ContrastSig(c("TP12","HostsPI240515.TP12"),c("TP24","HostsPI240515.TP24"))
+T24PI <- Cal.ContrastSig(c("TP24","HostsPI240515.TP24"),c("TP48","HostsPI240515.TP48"))
 Time_effects <- list(T12Lift,T24Lift,T12PI,T24PI)
-lapply(Time_effects,function(x) write.table(x,"Time_Effect",append=TRUE,quote=FALSE,sep = ",",col.names =TRUE ) )
+#lapply(Time_effects,function(x) write.table(x,"Time_Effect",append=TRUE,quote=FALSE,sep = ",",col.names =TRUE ) )
 ####################### HOST Effect  ###########################
 # Lifter PI HOST effect in TP12
 PLTP12 <- Cal.ContrastSig(c("HostsPI240515","HostsPI240515.TP12"),c("HostsLifter","HostsLifter.TP12"))
 PLTP24 <- Cal.ContrastSig(c("HostsPI240515","HostsPI240515.TP24"),c("HostsLifter","HostsLifter.TP24"))
 PLTP48 <- Cal.ContrastSig(c("HostsPI240515","HostsPI240515.TP48"),c("HostsLifter","HostsLifter.TP48"))
 Hosts_effects <- list(PLTP12,PLTP24,PLTP48)
-lapply(Hosts_effects,function(x) write.table(x,"Hosts_effects",append=TRUE,quote=FALSE,sep = ",",col.names =TRUE ) )
+#lapply(Hosts_effects,function(x) write.table(x,"Hosts_effects",append=TRUE,quote=FALSE,sep = ",",col.names =TRUE ) )
 
 ####################### PI Compare to Media #######################
 PICK12 <- Cal.ContrastSig(c("HostsPI240515","HostsPI240515.TP12"),c("HostsMedia_CK","HostsMedia_CK.TP12"))
 PICK24 <- Cal.ContrastSig(c("HostsPI240515","HostsPI240515.TP24"),c("HostsMedia_CK","HostsMedia_CK.TP24"))
 PICK48 <- Cal.ContrastSig(c("HostsPI240515","HostsPI240515.TP48"),c("HostsMedia_CK","HostsMedia_CK.TP48"))
 PIMedia_effects <- list(PLTP12,PLTP24,PLTP48)
-lapply(PIMedia_effects,function(x) write.table(x,"PIMedia_effects",append=TRUE,quote=FALSE,sep = ",",col.names =TRUE ) )
+#lapply(PIMedia_effects,function(x) write.table(x,"PIMedia_effects",append=TRUE,quote=FALSE,sep = ",",col.names =TRUE ) )
 
 ####################### Lifter Compare to Media #######################
 LTCK12 <- Cal.ContrastSig(c("HostsLifter","HostsLifter.TP12"),c("HostsMedia_CK","HostsMedia_CK.TP12"))
 LTCK24 <- Cal.ContrastSig(c("HostsLifter","HostsLifter.TP24"),c("HostsMedia_CK","HostsMedia_CK.TP24"))
 LTCK48 <- Cal.ContrastSig(c("HostsLifter","HostsLifter.TP48"),c("HostsMedia_CK","HostsMedia_CK.TP48"))
 LTMedia_effect <- list(LTCK12,LTCK24,LTCK48)
-lapply(LTMedia_effect,function(x) write.table(x,"LTMedia_effect",append=TRUE,quote=FALSE,sep = ",",col.names =TRUE ) )
+#lapply(LTMedia_effect,function(x) write.table(x,"LTMedia_effect",append=TRUE,quote=FALSE,sep = ",",col.names =TRUE ) )
 
 ####################### All Compare to Media #######################
 Trt_CK12 <- Cal.ContrastSig(c("HostsPI240515.TP12","HostsLifter.TP12"),c("HostsMedia_CK.TP12"),lV=c(1/2,-1))
 Trt_CK24 <- Cal.ContrastSig(c("HostsPI240515.TP24","HostsLifter.TP24"),c("HostsMedia_CK.TP24"),lV=c(1/2,-1))
 Trt_CK48 <- Cal.ContrastSig(c("HostsPI240515.TP48","HostsLifter.TP48"),c("HostsMedia_CK.TP48"),lV=c(1/2,-1))
 PlantVsMedia <- list(Trt_CK12,Trt_CK24,Trt_CK48)
-lapply(PlantVsMedia,function(x) write.table(x,"PlantVsMedia",append=TRUE,quote=FALSE,sep = ",",col.names =TRUE ) )
+#lapply(PlantVsMedia,function(x) write.table(x,"PlantVsMedia",append=TRUE,quote=FALSE,sep = ",",col.names =TRUE ) )
 
 # output summary vector
 
