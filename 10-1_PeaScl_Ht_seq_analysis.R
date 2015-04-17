@@ -9,7 +9,7 @@ library(gplots)
 # Prepare dataset
 setwd("/home/peascl/scl_de/htout_STAR_mergeGTF")
 directory <- "/home/peascl/scl_de/htout_STAR_mergeGTF"
-sampleFiles <- grep("htout.new",list.files(directory),value=TRUE)
+sampleFiles <- grep("htout",list.files(directory),value=TRUE)
 HostNames <- c(rep("Lifter",6),rep("PI240515",6),rep("Media_CK",6))
 TimePoint <- c("12","12","24","24","48","48",
                "12","12","24","24","48","48",
