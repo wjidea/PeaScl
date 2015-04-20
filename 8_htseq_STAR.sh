@@ -19,4 +19,6 @@
 # htseq-count -f bam -s no -r pos -i gene_id -m intersection-nonempty /home/peascl/scl_de/STARout_scl/Scl0205-48-1/Scl0205-48-1.Aligned.sortedByCoord.out.bam /home/peascl/scl_de/htout_STAR_scl/sclerotinia_sclerotiorum_2_transcripts.gtf > /home/peascl/scl_de/htout_STAR_scl/DOE_gtf/Scl0205-48-1.htout
 # htseq-count -f bam -s no -r pos -i gene_id -m intersection-nonempty /home/peascl/scl_de/STARout_scl/Scl0205-48-BR/Scl0205-48-BR.Aligned.sortedByCoord.out.bam /home/peascl/scl_de/htout_STAR_scl/sclerotinia_sclerotiorum_2_transcripts.gtf > /home/peascl/scl_de/htout_STAR_scl/DOE_gtf/Scl0205-48-BR.htout
 
-cat /home/peascl/scl_de/htout_STAR_mergeGTF/BAM_files.txt | parallel -j 10 --eta htseq-count -f bam -s no -i transcript_id -r pos -m intersection-nonempty /home/peascl/scl_de/STARout_scl_unstr/ab_initio/all_bam/{}.Aligned.sortedByCoord.out.bam /home/peascl/scl_de/STARout_scl_unstr/ab_initio/Sclsc_merged_ns.gtf '>' /home/peascl/scl_de/htout_STAR_mergeGTF/{.}.htout
+cat /home/peascl/scl_de/htout_STAR_mergeGTF/BAM_files.txt | parallel -j 10 --eta htseq-count -f bam -s no -i gene_id -r pos -m intersection-nonempty /home/peascl/scl_de/STARout_scl_unstr/ab_initio/all_bam/{}.Aligned.sortedByCoord.out.bam /home/peascl/scl_de/htout_STAR_scl/sclerotinia_sclerotiorum_2_transcripts.gtf '>' /home/peascl/scl_de/htout_STAR_mergeGTF/{.}.htout
+
+

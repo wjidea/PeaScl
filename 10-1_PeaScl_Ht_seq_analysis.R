@@ -16,13 +16,12 @@ TimePoint <- c("12","12","24","24","48","48",
                "12","12","24","24","48","48")
 ## DESeq data set needs to be a data.frame
 # SampleFile will connect independent files with the different conditions
-samplename <- unlist(lapply(sampleFiles,function(x) gsub("\\.htout\\.new","",x)))
+samplename <- unlist(lapply(sampleFiles,function(x) gsub("\\.htout","",x)))
 # prepare sample table
 sampleTable <- data.frame(sampleName=samplename,
                           fileName=sampleFiles,
                           Hosts=HostNames,
-                          TP=TimePoint
-)
+                          TP=TimePoint)
 ## Read in dataset
 # SampleTable has all the inforamtion for files and conditions
 # Directory contains the actual files

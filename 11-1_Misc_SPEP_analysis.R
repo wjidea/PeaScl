@@ -10,7 +10,6 @@ library(genefilter)
 library(RColorBrewer)
 # Function to draw plot based on gene name and contrast group
 draw_genename <- function (resfunc,name){
-  topGene <- grep(pattern = name,x = rownames(resfunc),value=TRUE)
   chartTitle <- paste("Gene Name: ",name)
   gdata <- plotCounts(dds , gene=topGene, intgroup=c("Hosts","TP"), 
                       returnData=TRUE,normalized = TRUE)
@@ -19,7 +18,7 @@ draw_genename <- function (resfunc,name){
   plot_gene + labs(title = chartTitle) + stat_smooth(se=F,method="loess")
 }
 
-draw_genename(assay(rld),"SS1G_12776")
+draw_genename(assay(rld),"SS1G_10796")
 test <- as.character(spep[spep$Gene_ID %in% "SS1G_12776",]$Annotation)
 
 
@@ -57,7 +56,7 @@ for (i in rownames(T24PI)){
     df <- df[order(df$Effector_candidate),]
   }
 }
-draw_genename(T24PI,"SS1G_12776")
+draw_genename(T24PI,"")
 test <- as.character(spep[spep$Gene_ID %in% "SS1G_12776",]$Annotation)
 
 
@@ -88,7 +87,7 @@ mat <- mat - rowMeans(mat)
 colnames(mat) <- paste0(rld$Hosts,"-",rld$TP)
 # heatmap.2(mat, trace="none", , ColSideColors=sidecols,
 #           labRow=TRUE, key=FALSE,lhei=c(2,8), lwid=c(1,4))
-heatmap(mat,col=colors,cexRow = 0.5,ColSideColors = sidecols,scale="row",)
+heatmap(mat,col=colors,cexRow = 0.5,ColSideColors = sidecols,)
 dev.off()
 
 spep_effector <- spep[spep$Effector_candidate %in% c("YES"),]
