@@ -3,11 +3,9 @@ library(Biobase)
 library(GenomicRanges)
 library(ggplot2)
 library(gplots)
-# Install necessary packages
-# source("http://bioconductor.org/biocLite.R")
-# biocLite("DESeq2")
+
 # Prepare dataset
-setwd("/home/peascl/scl_de/htout_STAR_mergeGTF")
+setwd("/home/peascl/scl_de/htout_STAR_mergeGTF/R_output/")
 directory <- "/home/peascl/scl_de/htout_STAR_mergeGTF"
 sampleFiles <- grep("htout",list.files(directory),value=TRUE)
 HostNames <- c(rep("Lifter",6),rep("PI240515",6),rep("Media_CK",6))
@@ -37,43 +35,17 @@ colData(ddsHTSeq)$TP <- factor(colData(ddsHTSeq)$TP, levels=c("12","24","48"))
 # Normalize reads among gene expression
 dds<-DESeq(ddsHTSeq,test = "Wald")
 
-# explore the result in general, and generate FDR
-#resall <- results(dds,pAdjustMethod = "BH")
-# sort by FDR
-#resall <- res[order(resall$padj),]
-#plotMA(dds,ylim=c(-2,2))
-
 # Estimate size factors and plot 
 dds <- estimateSizeFactors( dds )
-sizeFactors(dds)
-colSums(counts(dds))
-plot(sizeFactors(dds), colSums(counts(dds)))
-abline(lm(colSums(counts(dds)) ~ sizeFactors(dds) + 0))
-
-### Principal component analysis of samples ##
-logcounts <- log2( counts(dds, normalized=TRUE) + 1 )
-pc <- prcomp( t( logcounts ) )
-
-## Before rlog transformation (variance stabilizing transformation)
-# PCA
-plot(pc$x[,1], pc$x[,2], 
-     col=colData(dds)$TP, 
-     pch=as.numeric(colData(dds)$Hosts)+14)
-legend("bottomright",legend = c("Media-CK","Lifter","PI"),pch=c(15,16,17))
-legend("topright",legend=c("12","24","48"),col=c("Green","Red","Black"),pch=16)
-# Hierarchical clustering
-plot(hclust(dist(t(logcounts))), labels=colData(dds)$Hosts)
-plot(hclust(dist(t(logcounts))), labels=colData(dds)$TP)
-# logcounts
-# plot(logcounts[,1], logcounts[,3], cex=.1)
 
 # rlog transforamtion of data
-# this takes ~15 seconds
 rld <- rlogTransformation(dds,blind=FALSE,)
 
-## PCA after rlog transformation of data
-pc2 <- prcomp( t( assay(rld) ) )
+########### End of data DEseq2 prep #################
 
+# PCA after rlog transformation of data
+pc2 <- prcomp( t( assay(rld) ) )
+plotPCA(assay(rld),intgroup = c(Hosts,TP))
 # PCA plot
 plot(pc2$x[,1], pc2$x[,2],
      col=colData(rld)$TP, 
@@ -99,48 +71,9 @@ plotMA(resBigFC, ylim=c(-3,3))
 #abline(h=c(-1,1),lwd=5)
 with(resBigFCsort[Gene, ], {
   points(baseMean, log2FoldChange, col="dodgerblue", cex=2, lwd=2)
-  text(baseMean, log2FoldChange, as.vector(unlist(strsplit(Gene,"\\|")))[2], 
+  text(baseMean, log2FoldChange, Gene, 
        pos=4, col="dodgerblue")
 })
-
-# Cal.contrast <- function(vec1, vec2,lV=c(1,-1),top=50){
-#   res_func <- results(dds, contrast = list(vec1,vec2),
-#                       pAdjustMethod = "BH",listValues=lV)
-#   res_funcSort <- res_func[order(res_func$padj),]
-#   head(res_funcSort,top)
-# }
-  # Define conditions
-# cond <- with(colData(dds), factor(paste(Hosts,TP)))
-#   # VERY good function to show gene expression level between samples 
-#   # Give name to each column in the stripchart
-#   # obtain normalized read from the top DE genes 
-#   # [2] is the rank of the gene in the dds sorted result (i.e. resSort)
-# draw_stripchart <- function(x,n){
-#   k <- counts(dds,normalized=TRUE)[rownames(x)[n],]
-#   par(mar=c(8,5,2,2))
-#   stripchart(log2(k + 1) ~ cond, method="jitter", vertical=TRUE, las=2,)
-#   print(rownames(x)[n])
-# }
-#calculate contrast with significant threshold with FDR significance level of .1
-Cal.ContrastSig <- function(vec1, vec2,lV=c(1,-1),threshold=0.1){
-  res_func <- results(dds, contrast = list(vec1,vec2),
-                      pAdjustMethod = "BH",listValues=lV)
-  res_funcSort <- res_func[order(res_func$padj),]
-  resSig <- subset(res_funcSort, padj < threshold)
-  resSig
-}
-#Cal.ContrastSig(c("TP12","HostsLifter.TP12"),c("TP24","HostsLifter.TP24"),c(1,-1),0.1)
-
-draw_geneplot <- function (resfunc,n=1){
-  topGene <- rownames(resfunc)[n]
-  chartTitle <- paste("Gene Name: ",as.vector(unlist(strsplit(topGene,"\\|")))[2])
-  gdata <- plotCounts(dds , gene=topGene, intgroup=c("Hosts","TP"), 
-                      returnData=TRUE,normalized = TRUE)
-  plot_gene <- ggplot(gdata, aes(x=TP, y=count,color=Hosts, group=Hosts)) + 
-    geom_point(position=position_jitter(width=0.1,height=0),size=3,shape=16) 
-  p <- plot_gene + labs(title = chartTitle) + stat_smooth(se=F,method="loess")
-  return(list(p,as.vector(unlist(strsplit(topGene,"\\|")))[2]))
-}
 
 ####################### TIME Effect  ###########################
 # Detect time effect in host Lifter and PI
@@ -178,17 +111,6 @@ Trt_CK24 <- Cal.ContrastSig(c("HostsPI240515.TP24","HostsLifter.TP24"),c("HostsM
 Trt_CK48 <- Cal.ContrastSig(c("HostsPI240515.TP48","HostsLifter.TP48"),c("HostsMedia_CK.TP48"),lV=c(1/2,-1))
 PlantVsMedia <- list(Trt_CK12,Trt_CK24,Trt_CK48)
 #lapply(PlantVsMedia,function(x) write.table(x,"PlantVsMedia",append=TRUE,quote=FALSE,sep = ",",col.names =TRUE ) )
-
-# output summary vector
-
-
-
-#draw_stripchart(Trt_CK,10)
-res_test <- results(dds, contrast = list(c("TP12","HostsLifter.TP12"),c("TP24","HostsLifter.TP24")),pAdjustMethod = "BH",listValues=c(1,-1))
-summary(Trt_CK24)
-
-sum(res_test$padj < 0.1, na.rm=TRUE)
-draw_geneplot(PICK12,1)
 
 
 library("RColorBrewer")
